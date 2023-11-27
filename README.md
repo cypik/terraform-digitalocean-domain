@@ -21,7 +21,7 @@ You can use this module in your Terraform configuration like this:
 
 ```hcl
 module "domain" {
-  source = "git::https://github.com/opz0/terraform-digitalocean-domain.git?ref=v1.0.0"
+  source = "git::https://github.com/cypik/terraform-digitalocean-domain.git?ref=v1.0.0"
   name   = "test.shello.com"
 
   records = {
@@ -57,10 +57,10 @@ This module does not produce any outputs. It is primarily used for labeling reso
 - 'ttl':  The TTL value of the domain
 
 ## Examples
-For detailed examples on how to use this module, please refer to the 'examples' directory within this repository.
+For detailed examples on how to use this module, please refer to the '[examples](https://github.com/cypik/terraform-digitalocean-domain/blob/master/example)' directory within this repository.
 
 ## License
-This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/opz0/terraform-digitalocean-domain/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/cypik/terraform-digitalocean-domain/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
