@@ -12,7 +12,7 @@
 - [Outputs](#outputs)
 
 ## Introduction
-This Terraform configuration is designed to create and manage a DigitalOcean DOMAIN.
+This Terraform configuration is designed to create and manage a DigitalOcean Domain.
 
 ## Usage
 To use this module, you should have Terraform installed and configured for DIGITALOCEAN. This module provides the necessary Terraform configuration for creating DIGITALOCEAN resources, and you can customize the inputs as needed. Below is an example of how to use this module:
@@ -22,11 +22,11 @@ You can use this module in your Terraform configuration like this:
 
 ```hcl
 module "domain" {
-  source = "cypik/domain/digitalocean"
-  version = "1.0.1"
-  name   = "test.shello.com"
+  source    = "cypik/domain/digitalocean"
+  version   = "1.0.1"
+  name      = "test.shello.com"
 
-  records = {
+  records   = {
     record1 = {
       type  = "A"
       name  = "class"
