@@ -23,7 +23,7 @@ You can use this module in your Terraform configuration like this:
 ```hcl
 module "domain" {
   source    = "cypik/domain/digitalocean"
-  version   = "1.0.1"
+  version   = "1.0.2"
   name      = "test.shello.com"
 
   records   = {
@@ -59,14 +59,14 @@ Your Name Replace **MIT** and **cypik** with the appropriate license and your in
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.34.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.40.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.34.1 |
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.40.0 |
 
 ## Modules
 
@@ -83,10 +83,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_enabled"></a> [enabled](#input\_enabled) | n/a | `bool` | `true` | no |
+| <a name="input_enabled"></a> [enabled](#input\_enabled) | Flag to control the droplet creation. | `bool` | `true` | no |
 | <a name="input_ip_address"></a> [ip\_address](#input\_ip\_address) | The IP address of the domain. If specified, this IP is used to created an initial A record for the domain. | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the domain | `string` | `"mycustomdomain.com"` | no |
-| <a name="input_records"></a> [records](#input\_records) | n/a | `map(any)` | `{}` | no |
+| <a name="input_records"></a> [records](#input\_records) | A list of DNS records for the DigitalOcean domain. Each record should include fields such as type (e.g., A, CNAME, MX), name, data (e.g., IP address, target), priority, and TTL. | `map(any)` | `{}` | no |
 
 ## Outputs
 

@@ -11,13 +11,15 @@ variable "ip_address" {
 }
 
 variable "records" {
-  type    = map(any)
-  default = {}
+  type        = map(any)
+  default     = {}
+  description = "A list of DNS records for the DigitalOcean domain. Each record should include fields such as type (e.g., A, CNAME, MX), name, data (e.g., IP address, target), priority, and TTL."
 }
 
 variable "enabled" {
-  type    = bool
-  default = true
+  type        = bool
+  default     = true
+  description = "Flag to control the droplet creation."
 }
 
 
